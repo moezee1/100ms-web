@@ -44,11 +44,11 @@ export const NonPublisherView = React.memo(({ message }) => {
             color="$on_surface_medium"
             css={{ mt: "$4", "@md": { fontSize: "$sm" } }}
           >
-            Please go to dashboard and reconfigure role settings or contact the
-            role admin.
+            
           </Text>
         </Flex>
       </Flex>
     </Box>
   );
 });
+/* Please go to dashboard and reconfigure role settings or contact the role admin. */
