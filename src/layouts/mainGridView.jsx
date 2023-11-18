@@ -48,7 +48,8 @@ export const MainGridView = () => {
     if (!hasPublishingPeers) {
       setPlaceholder("None of the roles can publish video, audio or screen");
     } else if (!localRole.subscribeParams.subscribeToRoles?.length) {
-      setPlaceholder("This role isn't subscribed to any role");
+      //setPlaceholder("This role isn't subscribed to any role");
+      setPlaceholder("Wait Room");
     } else if (!hasSubscribedRolePublishing) {
       setPlaceholder("This role subscribed to roles is not publishing");
     } else {
