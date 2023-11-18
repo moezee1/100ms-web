@@ -1,5 +1,6 @@
 import React from "react";
 import { ShieldAlertIcon } from "@100mslive/react-icons";
+import { AddIcon } from "@100mslive/react-icons";
 import { Box, Flex, Text } from "@100mslive/roomkit-react";
 
 export const NonPublisherView = React.memo(({ message }) => {
@@ -28,7 +29,7 @@ export const NonPublisherView = React.memo(({ message }) => {
           gap: "$8",
         }}
       >
-        <ShieldAlertIcon color="#C3D0E5" width="80px" height="80px" />
+        <AddIcon color="#C3D0E5" width="80px" height="80px" />
         <Flex
           direction="column"
           css={{
