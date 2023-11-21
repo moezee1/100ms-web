@@ -261,7 +261,7 @@ function AppRoutes({ getDetails, authTokenByRoomCodeEndpoint }) {
     </Router>
   );
 }
-
+/*
 export default function App() {
   return (
     <EdtechComponent
@@ -277,3 +277,56 @@ export default function App() {
     />
   );
 }
+*/
+var settings = {
+  "url": "https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Authorization": "Bearer <token>"
+  },
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+}).success(function(response){
+export default function App() {
+  return (
+    <EdtechComponent
+      themeConfig={{
+        aspectRatio: process.env.REACT_APP_TILE_SHAPE,
+        theme: process.env.REACT_APP_THEME,
+        color: process.env.REACT_APP_COLOR,
+        logo: response.link,
+        font: process.env.REACT_APP_FONT,
+        headerPresent: process.env.REACT_APP_HEADER_PRESENT,
+        metadata: process.env.REACT_APP_DEFAULT_APP_DETAILS, // A stringified object in env
+      }}
+    />
+  );
+}
+
+}).fail(function(response){
+export default function App() {
+  return (
+    <EdtechComponent
+      themeConfig={{
+        aspectRatio: process.env.REACT_APP_TILE_SHAPE,
+        theme: process.env.REACT_APP_THEME,
+        color: process.env.REACT_APP_COLOR,
+        logo: process.env.REACT_APP_LOGO,
+        font: process.env.REACT_APP_FONT,
+        headerPresent: process.env.REACT_APP_HEADER_PRESENT,
+        metadata: process.env.REACT_APP_DEFAULT_APP_DETAILS, // A stringified object in env
+      }}
+    />
+  );
+}
+
+});
+
+
+
+
+
