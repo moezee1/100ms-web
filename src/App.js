@@ -282,7 +282,7 @@ export default function App() {
 const [datab, updateData] = useState('');
 useEffect(() => {
     (async () => {
-  const res = await fetch('https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1');
+  const res = await fetch('https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h='+window.location.hostname+'&l=1');
   const data = await res.json();
   console.log(data.link);
 updateData(data.link);
