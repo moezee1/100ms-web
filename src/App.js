@@ -279,24 +279,24 @@ export default function App() {
 }
 */
 export default function App() {
-var settings = {
-  "url": "https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1",
-  "method": "GET",
-  "timeout": 0,
-  "headers": {
-    "Authorization": "Bearer <token>"
-  },
-};
+var link;
+useEffect(() => {
+    (async () => {
+  const res = await fetch('https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1');
+  const data = await res.json();
+      link=data.link;
+  return data.link;
+    })();
+  }, [])
 
-$.ajax(settings).done(function(response){
-
+  
   return (
     <EdtechComponent
       themeConfig={{
         aspectRatio: process.env.REACT_APP_TILE_SHAPE,
         theme: process.env.REACT_APP_THEME,
         color: process.env.REACT_APP_COLOR,
-        logo: response.link,
+        logo: link,
         font: process.env.REACT_APP_FONT,
         headerPresent: process.env.REACT_APP_HEADER_PRESENT,
         metadata: process.env.REACT_APP_DEFAULT_APP_DETAILS, // A stringified object in env
@@ -305,23 +305,7 @@ $.ajax(settings).done(function(response){
   );
 
 
-}).fail(function(response){
-  return (
-    <EdtechComponent
-      themeConfig={{
-        aspectRatio: process.env.REACT_APP_TILE_SHAPE,
-        theme: process.env.REACT_APP_THEME,
-        color: process.env.REACT_APP_COLOR,
-        logo: process.env.REACT_APP_LOGO,
-        font: process.env.REACT_APP_FONT,
-        headerPresent: process.env.REACT_APP_HEADER_PRESENT,
-        metadata: process.env.REACT_APP_DEFAULT_APP_DETAILS, // A stringified object in env
-      }}
-    />
-  );
 
-
-});
 
 }
 
