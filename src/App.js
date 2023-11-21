@@ -279,7 +279,7 @@ export default function App() {
 }
 */
 export default function App() {
-const [data, updateData] = useState();
+const [datab, updateData] = useState();
 useEffect(() => {
     (async () => {
   const res = await fetch('https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1');
@@ -295,7 +295,7 @@ updateData(data.link);
         aspectRatio: process.env.REACT_APP_TILE_SHAPE,
         theme: process.env.REACT_APP_THEME,
         color: process.env.REACT_APP_COLOR,
-        logo: {data},
+        logo: {datab},
         font: process.env.REACT_APP_FONT,
         headerPresent: process.env.REACT_APP_HEADER_PRESENT,
         metadata: process.env.REACT_APP_DEFAULT_APP_DETAILS, // A stringified object in env
