@@ -278,6 +278,7 @@ export default function App() {
   );
 }
 */
+export default function App() {
 var settings = {
   "url": "https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1",
   "method": "GET",
@@ -291,7 +292,7 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 
 }).success(function(response){
-export default function App() {
+
   return (
     <EdtechComponent
       themeConfig={{
@@ -305,10 +306,9 @@ export default function App() {
       }}
     />
   );
-}
+
 
 }).fail(function(response){
-export default function App() {
   return (
     <EdtechComponent
       themeConfig={{
@@ -322,11 +322,11 @@ export default function App() {
       }}
     />
   );
-}
+
 
 });
 
-
+}
 
 
 
