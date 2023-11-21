@@ -29,7 +29,7 @@ import { FlyingEmoji } from "./plugins/FlyingEmoji.jsx";
 import { RemoteStopScreenshare } from "./plugins/RemoteStopScreenshare";
 import { getRoutePrefix, shadeColor } from "./common/utils";
 import { FeatureFlags } from "./services/FeatureFlags";
-
+import $ from 'jquery';
 const Conference = React.lazy(() => import("./components/conference"));
 const PreviewScreen = React.lazy(() => import("./components/PreviewScreen"));
 
