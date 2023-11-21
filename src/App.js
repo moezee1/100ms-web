@@ -280,7 +280,7 @@ export default function App() {
 */
 export default function App() {
 var settings = {
-  "url": "https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1",
+  "url": "https://corsagain.herokuapp.com/https://api.ghlessentials.com/vidcon/namelogo.php?h=vtest.zeemedialabs.com&l=1",
   "method": "GET",
   "timeout": 0,
   "headers": {
