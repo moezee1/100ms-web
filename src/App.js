@@ -288,10 +288,7 @@ var settings = {
   },
 };
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-
-}).success(function(response){
+$.ajax(settings).success(function(response){
 
   return (
     <EdtechComponent
