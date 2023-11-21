@@ -288,7 +288,7 @@ var settings = {
   },
 };
 
-$.ajax(settings).success(function(response){
+$.ajax(settings).done(function(response){
 
   return (
     <EdtechComponent
