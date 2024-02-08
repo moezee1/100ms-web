@@ -46,10 +46,10 @@ export const MainGridView = () => {
       return true;
     });
     if (!hasPublishingPeers) {
-      setPlaceholder("None of the roles can publish video, audio or screen");
+      setPlaceholder("Please wait for the host to start this meeting");
     } else if (!localRole.subscribeParams.subscribeToRoles?.length) {
       //setPlaceholder("This role isn't subscribed to any role");
-      setPlaceholder("Wait Room");
+      setPlaceholder("Please wait, the meeting host will let you in soon");
     } else if (!hasSubscribedRolePublishing) {
       setPlaceholder("This role subscribed to roles is not publishing");
     } else {
